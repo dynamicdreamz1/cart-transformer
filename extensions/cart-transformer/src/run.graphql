@@ -1,0 +1,19 @@
+query RunInput {
+  cart {
+    lines {
+      id
+      quantity
+      merchandise {
+        productType: __typename
+        ... on ProductVariant {
+          id
+        }
+      }
+    }
+  }
+  cartTransform {
+    metafield(namespace: "global", key: "settings") {
+      value
+    }
+  }
+}
