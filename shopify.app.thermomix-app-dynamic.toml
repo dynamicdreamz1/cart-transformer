@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "610e785827e9699201b4f4b192b29604"
+name = "Thermomix App Dynamic"
+application_url = "https://gadgets-ease-coating-yourself.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "findash-shipping-1.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_cart_transforms,read_content,read_products,write_cart_transforms,write_content,write_products"
+
+[auth]
+redirect_urls = [
+  "https://gadgets-ease-coating-yourself.trycloudflare.com/auth/callback",
+  "https://gadgets-ease-coating-yourself.trycloudflare.com/auth/shopify/callback",
+  "https://gadgets-ease-coating-yourself.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
