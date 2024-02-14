@@ -12,6 +12,8 @@ export const loader = async ({ request }) => {
     throw redirect(`/app?${url.searchParams.toString()}`);
   }
 
+  console.log('============pappu')
+
   return json({ showForm: Boolean(login) });
 };
 
